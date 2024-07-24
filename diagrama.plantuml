@@ -1,0 +1,23 @@
+@startuml
+skinparam componentStyle rectangle
+component "plantuml"  {
+
+  interface TocadorMusica
+  TocadorMusica : tocar()
+  TocadorMusica : pausar()
+  TocadorMusica : selecionarMusica(String musica)
+
+  interface AparelhoTelefonico
+  AparelhoTelefonico : ligar(String numero)
+  AparelhoTelefonico : atender()
+  AparelhoTelefonico : iniciarCorreioVoz()
+
+  interface NavegadorInternet
+  NavegadorInternet : exibirPagina(String url)
+  NavegadorInternet : adicionarNovaAba()
+  NavegadorInternet : atualizarPagina()
+
+  class iPhone implements TocadorMusica, AparelhoTelefonico, NavegadorInternet
+
+}
+@enduml
